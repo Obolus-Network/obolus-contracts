@@ -1,0 +1,295 @@
+{
+  "preamble": {
+    "title": "obolus/obolus-contracts",
+    "description": "Obolus Network — Yield vaults and credit rails on Cardano",
+    "version": "0.0.1",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.21+42babe5"
+    }
+  },
+  "validators": [
+    {
+      "title": "credit_engine.credit_engine.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/obolus~1types~1CreditDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/obolus~1types~1CreditAction"
+        }
+      },
+      "compiledCode": "59019e01010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cdc3a400530070024888966002600460106ea800e26466453001159800980098059baa0028cc004c038c030dd500148c03cc040c0400064601e602000322598009801800c520be9a0c899b833370400490504e00800a01898059baa00748888966002600c00315980099b89375a602660226ea803120e05d899b88482827004cc008cdc11bad30033011375400a900a1bad30043011375400b14a0807a2b3001300a0018992cc004cdc4240000031337120026eb4c014c048dd500345282020375a602660226ea8032266e20cc008cdc11bad30033011375400a900a1bad30043011375400a90744200a01e403c8b201498059baa0079807001a444b30013004002899192cc004c05000a00b1640486eb4c048004c03cdd5005456600260100051323259800980a00140162c8090dd6980900098079baa00a8acc004cdc3a400800515980098079baa00a801c5901045900d201a4034300c300d001370e900018049baa0038b200e180380098019baa0078a4d1365640041",
+      "hash": "f7b6dc4ab01fb9db962a10017d8381c66b561662168f6669f0b31352"
+    },
+    {
+      "title": "credit_engine.credit_engine.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59019e01010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cdc3a400530070024888966002600460106ea800e26466453001159800980098059baa0028cc004c038c030dd500148c03cc040c0400064601e602000322598009801800c520be9a0c899b833370400490504e00800a01898059baa00748888966002600c00315980099b89375a602660226ea803120e05d899b88482827004cc008cdc11bad30033011375400a900a1bad30043011375400b14a0807a2b3001300a0018992cc004cdc4240000031337120026eb4c014c048dd500345282020375a602660226ea8032266e20cc008cdc11bad30033011375400a900a1bad30043011375400a90744200a01e403c8b201498059baa0079807001a444b30013004002899192cc004c05000a00b1640486eb4c048004c03cdd5005456600260100051323259800980a00140162c8090dd6980900098079baa00a8acc004cdc3a400800515980098079baa00a801c5901045900d201a4034300c300d001370e900018049baa0038b200e180380098019baa0078a4d1365640041",
+      "hash": "f7b6dc4ab01fb9db962a10017d8381c66b561662168f6669f0b31352"
+    },
+    {
+      "title": "vault_core.vault_core.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/obolus~1types~1VaultDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/obolus~1types~1VaultAction"
+        }
+      },
+      "compiledCode": "59017701010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cdc3a400530070024888966002600460106ea800e26466453001159800980098059baa0028cc0048c03cc040c040c040c040c040c040c040c04000644646600200200644b30010018a508acc004cdc79bae30120010038a518998010011809800a01c4045300b375400e9112cc004c01000629462b300130080018acc004cc008dd6180198079baa007375c6022601e6ea8c044c03cdd5002c4cdc4240006eb4c044c03cdd50054528201a8998011bac3003300f375400e911126b65657065725f706c616365686f6c6465720040348069164029300b375400f300e003488966002600800515980098079baa00a801c59010456600260100051323259800980a00140162c8090dd6980900098079baa00a8acc004cdc3a400800515980098079baa00a801c5901045900d201a4034300c300d001370e900018049baa0038b200e180380098019baa0078a4d13656400401",
+      "hash": "d216f3580a13b249a5888e59455d6084663669b261ef092f17fd5713"
+    },
+    {
+      "title": "vault_core.vault_core.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59017701010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cdc3a400530070024888966002600460106ea800e26466453001159800980098059baa0028cc0048c03cc040c040c040c040c040c040c040c04000644646600200200644b30010018a508acc004cdc79bae30120010038a518998010011809800a01c4045300b375400e9112cc004c01000629462b300130080018acc004cc008dd6180198079baa007375c6022601e6ea8c044c03cdd5002c4cdc4240006eb4c044c03cdd50054528201a8998011bac3003300f375400e911126b65657065725f706c616365686f6c6465720040348069164029300b375400f300e003488966002600800515980098079baa00a801c59010456600260100051323259800980a00140162c8090dd6980900098079baa00a8acc004cdc3a400800515980098079baa00a801c5901045900d201a4034300c300d001370e900018049baa0038b200e180380098019baa0078a4d13656400401",
+      "hash": "d216f3580a13b249a5888e59455d6084663669b261ef092f17fd5713"
+    },
+    {
+      "title": "vtokens_policy.vtokens.mint",
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "58a101010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900018031baa00189991198008009bac300b30093754601600c6eb8c024c01cdd5000912cc00400629422b30015980099b8748008c020dd5180598049baa300b300937546016601860126ea8c02c006294629410074528c4cc008008c03000500720148b200a30070013007300800130070013003375400f149a26cac80081",
+      "hash": "6d2d42352a902630de378c3bf328aaef6ca9c0929bdb3c5c4231a490"
+    },
+    {
+      "title": "vtokens_policy.vtokens.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "58a101010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900018031baa00189991198008009bac300b30093754601600c6eb8c024c01cdd5000912cc00400629422b30015980099b8748008c020dd5180598049baa300b300937546016601860126ea8c02c006294629410074528c4cc008008c03000500720148b200a30070013007300800130070013003375400f149a26cac80081",
+      "hash": "6d2d42352a902630de378c3bf328aaef6ca9c0929bdb3c5c4231a490"
+    },
+    {
+      "title": "yield_router.yield_router.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/obolus~1types~1YieldRouterDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/obolus~1types~1RouterAction"
+        }
+      },
+      "compiledCode": "59017501010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c01cdd500144c8cc8a60022b30013001300a37540051332259800980198061baa0088acc004cc004dd6180118069baa0064881126b65657065725f706c616365686f6c64657200899b8848000dd69807980818069baa300f300d375400914a0805a2b30013300137586004601a6ea80192211161646d696e5f706c616365686f6c64657200899b89375a601e601a6ea802120a09c018a50402c80588c038c03cc03cc03cc03cc03cc03cc03cc03c00488c8cc00400400c896600200314a115980099b8f375c602200200714a31330020023012001403480822c804a60146ea801a601a0069112cc004c01000a2b3001300e37540130038b201e8acc004cdc3a40040051323259800980980140162c8088dd6980880098071baa0098b20184030300b300c001370e900018041baa0028b200c180380098019baa0078a4d1365640041",
+      "hash": "8b2fa4a89ed845d11d81950638457f784267abcad9cb669996a125c1"
+    },
+    {
+      "title": "yield_router.yield_router.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "59017501010029800aba2aba1aab9faab9eaab9dab9a48888896600264653001300700198039804000cc01c0092225980099b8748008c01cdd500144c8cc8a60022b30013001300a37540051332259800980198061baa0088acc004cc004dd6180118069baa0064881126b65657065725f706c616365686f6c64657200899b8848000dd69807980818069baa300f300d375400914a0805a2b30013300137586004601a6ea80192211161646d696e5f706c616365686f6c64657200899b89375a601e601a6ea802120a09c018a50402c80588c038c03cc03cc03cc03cc03cc03cc03cc03c00488c8cc00400400c896600200314a115980099b8f375c602200200714a31330020023012001403480822c804a60146ea801a601a0069112cc004c01000a2b3001300e37540130038b201e8acc004cdc3a40040051323259800980980140162c8088dd6980880098071baa0098b20184030300b300c001370e900018041baa0028b200c180380098019baa0078a4d1365640041",
+      "hash": "8b2fa4a89ed845d11d81950638457f784267abcad9cb669996a125c1"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Data": {
+      "title": "Data",
+      "description": "Any Plutus data."
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "obolus/types/CreditAction": {
+      "title": "CreditAction",
+      "anyOf": [
+        {
+          "title": "OpenCredit",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "ltv_bps",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        },
+        {
+          "title": "Repay",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "amount",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        },
+        {
+          "title": "Liquidate",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": []
+        }
+      ]
+    },
+    "obolus/types/CreditDatum": {
+      "title": "CreditDatum",
+      "anyOf": [
+        {
+          "title": "CreditDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "borrower",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "collateral_vtokens",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "borrowed_amount",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "borrow_slot",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "ltv_bps",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "repay_mode",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    },
+    "obolus/types/RouterAction": {
+      "title": "RouterAction",
+      "anyOf": [
+        {
+          "title": "RouteYield",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "UpdateDebtPortion",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "new_bps",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "obolus/types/VaultAction": {
+      "title": "VaultAction",
+      "anyOf": [
+        {
+          "title": "Deposit",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Withdraw",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": [
+            {
+              "title": "amount",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        },
+        {
+          "title": "Harvest",
+          "dataType": "constructor",
+          "index": 2,
+          "fields": []
+        }
+      ]
+    },
+    "obolus/types/VaultDatum": {
+      "title": "VaultDatum",
+      "anyOf": [
+        {
+          "title": "VaultDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "owner",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "deposited_amount",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "vtokens_minted",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "deposit_slot",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "strategy",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    },
+    "obolus/types/YieldRouterDatum": {
+      "title": "YieldRouterDatum",
+      "anyOf": [
+        {
+          "title": "YieldRouterDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "vault_ref",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "pending_yield",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "debt_portion_bps",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

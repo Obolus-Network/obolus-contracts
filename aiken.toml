@@ -1,0 +1,13 @@
+name = "obolus/obolus-contracts"
+version = "0.0.1"
+description = "Obolus Network — Yield vaults and credit rails on Cardano"
+
+[repository]
+user = "obolus"
+project = "obolus-contracts"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "v2.2.0"
+source = "github"
